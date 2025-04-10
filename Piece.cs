@@ -19,7 +19,7 @@ namespace Chess
             Color = color;
         }
 
-        public abstract List<Move> PossibleMoves();
+        public abstract List<Move> GenerateMoves(Board board);
 
 
     }

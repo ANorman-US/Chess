@@ -16,11 +16,31 @@ namespace Chess
             InitializeBoard();
         }
 
+        public bool IsValidMove(Piece piece, Move move)
+        {
+            return false;
+        }
+
         public void InsertPiece(Piece piece)
         {
             Squares[piece.Row,piece.Col].AssignPieceToSquare(piece);
         }
-        public void InitializeBoard()
+
+        public void PrintBoard()
+        {
+            for(int row = 7; row >= 0; row--)
+            {
+                for (int col = 0; col < 8; col++)
+                {
+                    if (Squares[row, col].Piece != null)
+                        Console.Write(Squares[row, col].Piece.Name);
+                    else
+                        Console.Write(' ');
+                }
+                Console.WriteLine();
+            }
+        }
+        private void InitializeBoard()
         {
             for(int row = 0; row < 8; row++)
             {

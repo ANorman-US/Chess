@@ -25,6 +25,13 @@ namespace Chess
             Piece = piece;
         }
 
+        public bool IsSquareOccupied()
+        {
+            if (Piece != null)
+                return true;
+            return false;
+        }
+
         public string StringLocation()
         {
             char file = (char)('a' + Col);

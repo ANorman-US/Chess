@@ -12,6 +12,12 @@ namespace Chess
         public Square Destination { get; private set; }
         public Piece Piece { get; private set; }
         public Piece CapturePiece { get; private set; }
+
+        public Move(Square origin, Square Destination)
+        {
+            Origin = origin;
+            Destination = Destination;
+        }
         public Move(Square origin, Square destination, Piece piece)
         {
             Origin = origin;
